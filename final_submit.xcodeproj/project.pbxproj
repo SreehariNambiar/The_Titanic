@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2FBFC006264DB6860012B8BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FBFC005264DB6860012B8BA /* main.cpp */; };
+		2FBFC00F264DB6C30012B8BA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBFC00E264DB6C30012B8BA /* OpenGL.framework */; };
+		2FBFC011264DB6CB0012B8BA /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBFC010264DB6CB0012B8BA /* GLUT.framework */; };
+		2FBFC015264DC0160012B8BA /* SDL2SoundEffects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FBFC013264DC0160012B8BA /* SDL2SoundEffects.cpp */; };
+		2FBFC019264DC0990012B8BA /* libSDL2_mixer-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBFC018264DC0990012B8BA /* libSDL2_mixer-2.0.0.dylib */; };
+		2FBFC01C264DC0B10012B8BA /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBFC01B264DC0B10012B8BA /* libSDL2-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,12 @@
 /* Begin PBXFileReference section */
 		2FBFC002264DB6860012B8BA /* final_submit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = final_submit; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBFC005264DB6860012B8BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2FBFC00E264DB6C30012B8BA /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		2FBFC010264DB6CB0012B8BA /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		2FBFC013264DC0160012B8BA /* SDL2SoundEffects.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SDL2SoundEffects.cpp; sourceTree = "<group>"; };
+		2FBFC014264DC0160012B8BA /* SDL2SoundEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL2SoundEffects.h; sourceTree = "<group>"; };
+		2FBFC018264DC0990012B8BA /* libSDL2_mixer-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_mixer-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/sdl2_mixer/2.0.4_1/lib/libSDL2_mixer-2.0.0.dylib"; sourceTree = "<group>"; };
+		2FBFC01B264DC0B10012B8BA /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/sdl2/2.0.14_1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBFC01C264DC0B10012B8BA /* libSDL2-2.0.0.dylib in Frameworks */,
+				2FBFC019264DC0990012B8BA /* libSDL2_mixer-2.0.0.dylib in Frameworks */,
+				2FBFC011264DB6CB0012B8BA /* GLUT.framework in Frameworks */,
+				2FBFC00F264DB6C30012B8BA /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +58,7 @@
 			children = (
 				2FBFC004264DB6860012B8BA /* final_submit */,
 				2FBFC003264DB6860012B8BA /* Products */,
+				2FBFC00D264DB6C30012B8BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +74,21 @@
 			isa = PBXGroup;
 			children = (
 				2FBFC005264DB6860012B8BA /* main.cpp */,
+				2FBFC013264DC0160012B8BA /* SDL2SoundEffects.cpp */,
+				2FBFC014264DC0160012B8BA /* SDL2SoundEffects.h */,
 			);
 			path = final_submit;
+			sourceTree = "<group>";
+		};
+		2FBFC00D264DB6C30012B8BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FBFC01B264DC0B10012B8BA /* libSDL2-2.0.0.dylib */,
+				2FBFC018264DC0990012B8BA /* libSDL2_mixer-2.0.0.dylib */,
+				2FBFC010264DB6CB0012B8BA /* GLUT.framework */,
+				2FBFC00E264DB6C30012B8BA /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FBFC006264DB6860012B8BA /* main.cpp in Sources */,
+				2FBFC015264DC0160012B8BA /* SDL2SoundEffects.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +270,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2_mixer/2.0.4_1/lib,
+					/usr/local/Cellar/sdl2/2.0.14_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2_mixer/2.0.4_1/lib,
+					/usr/local/Cellar/sdl2/2.0.14_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
